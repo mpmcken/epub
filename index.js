@@ -3,13 +3,13 @@ const path = require('path')
 const axios = require('./speed-limiter')
 const cheerio = require('cheerio')
 
-const bookID = '9781319081799'
+const bookID = '9781948258746'
 const baseURL = `https://jigsaw.vitalsource.com/books/${bookID}/epub/`
 const fsRelativePath = './epub/'
 
 // Cookie value sent to jigsaw.vitalsource.com from the browser
 // including: reese84 + jigsaw_session
-const globalCookieVal = ``
+const globalCookieVal = `LBKNT4OWv3zvWVmcVQXFefRD2mEcnAXVUUCiqRzm6yvSy70BYzM%2Beorfk%2FqejrMXwfAEEKBu1xy8UntKYrZ%2FvoTFgLhI7Ab2wE4uUR2hlEdbhCGHUyd%2BXFFYPW9OTybE3NX3ZCi3IgVS%2FYYCcFnjR%2FKzhL%2B53r4Y9PeF%2FLutvXVZu7QCy7SXFWs5Ueb3%2BCEgCzNpC6cMc2LueO%2BHdWSoE6uUzwcdjOpDoXUlrxYV27xTjNm%2F5N5Km%2Feae%2FU6obyzuyVe5e%2FoWAhlIswxbwkBrjWEeVWQ9mIRbvyvX7zZdnkhC4IvVbWw5Vcg1kDZvbHz1qZKlwh2OwYkkXXl6tzN%2Frn101vPdQZTidddJpGhZRhcrlUPCyH9DrnYnTWdv2oD3adqSu3zEpEwy0H8ddqHbDdmvHvZLLRQbplnLKD6vvq33%2F6P3iMChHm8JqsF2Qm43JBykkZK1M8RpX%2Fzg8eaLdTEtD%2Ba%2BQ%3D%3D--enpLTT3N6TS78wYh--th0%2FcEOnTdm3buy42D%2FySA%3D%3D`
 
 const writeIntoFS = async (filepath, contents) => {
   const file = path.resolve(fsRelativePath, filepath)
